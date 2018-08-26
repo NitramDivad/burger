@@ -1,7 +1,7 @@
     <div class="container">    
         <div class="row">
             <div class="col-md-12 text-center display-2">
-                <div><img src="assets/img/burger.png" width="150"></div>
+                <div class="mt-4"><img src="assets/img/burger.png" width="150"></div>
                 <div class="display-4 mb-4">Eat-Da-Burger</div>
             </div>
         </div>
@@ -9,19 +9,37 @@
             <div class="col-md-12 text-center">
                 <div class="form-group">
                     <label for="burgerName">Enter the Burger you want to eat!</label>
-                    <input type="text" id="burgerName" name="name">
+                    <input type="text" class="pl-1" id="burgerName" name="name" size="40">
                 </div>
-                <div id="btnSubmit" class="text-center">
-                    <button type="submit" class="btn">Submit</button>
+                <div class="text-center">
+                    <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-6 text-center display-5">
-                Burgers to Devour
+            <div class="col-md-6 text-center">
+                <h3>Burgers to Devour</h3>
+                <ul class="list-unstyled">
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            <li>
+                                <button class="devourIt mb-2 mr-2 btn btn-primary" data-id="{{this.id}}">Devour It!</button>
+                                {{burger_name}}
+                            </li>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
             </div>
-            <div class="col-md-6 text-center display-5">
-                Devoured Burgers
+            <div class="col-md-6 text-center">
+                <h3>Devoured Burgers</h3>
+                <ul class="list-unstyled">
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            <li>{{burger_name}}</li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
             </div>
         </div>
+    </div>
