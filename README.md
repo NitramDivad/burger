@@ -8,8 +8,8 @@ In this activity, I was tasked to create a burger logger with MySQL, Node, Expre
 
 The app is structured so that user input is as simple as submitting a burger choice.  That choice will saved to the MySQL database per the following schema:
 
-    * id: integer data type; primary key
-    * burger_name: varchar data type
+    * id: integer data type not null; primary key
+    * burger_name: varchar(255) data type not null
     * devoured: boolean data type; default value = false (0)
     * createdAt: timestamp data type; default value = current timestamp
 
