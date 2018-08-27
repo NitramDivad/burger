@@ -15,7 +15,7 @@ The app is structured so that user input is as simple as submitting a burger cho
 
 When a burger is submitted, it is added to the "Burgers to Devour" list on the left hand side, along with a button labelled "Devour It!".  The name of the burger will be populated to the burger_name DB table column with a false value assigned to the devoured column.  As well, the id column will be incremented and updated along with the createdAt column being assigned the current timestamp.
 
-When the "Devour" button is clicked, the burger will be removed from the "Burgers to Devour" list and will be added to the "Devoured Burgers" list on the right hand side.  Additionally, the "devoured" DB table column will be updated with a value of true (1).
+When the "Devour It!" button is clicked, the burger will be removed from the "Burgers to Devour" list and will be added to the "Devoured Burgers" list on the right hand side.  Additionally, the "devoured" DB table column will be updated with a value of true (1).
 
 
 
